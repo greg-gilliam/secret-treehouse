@@ -19,7 +19,7 @@ export default function Login() {
     event.preventDefault();
     const loginWasSuccessful = auth.login(formState.email, formState.password);
     if (loginWasSuccessful) {
-      history.replace(from);
+      history.replace(from.pathname);
     } else {
       setError('Username or password do not match, please retry.');
     }
